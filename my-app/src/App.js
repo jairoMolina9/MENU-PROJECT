@@ -1,4 +1,4 @@
-import Test from "./Test";
+import Event from "./EventMain";
 import './App.css';
 
 
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <Test></Test>
+      <Event> </Event>
     </div>
   );
 }

@@ -3,7 +3,8 @@ const { MongoClient } = require('mongodb');
 const url = `mongodb+srv://jmolina:sweatyboys@cluster0.awqxaei.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(url);
-const dbName = 'sample_restaurants';
+
+const dbName = 'MenuApp';
 
 let db;
 
