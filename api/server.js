@@ -21,10 +21,14 @@ const db = require('./mongoUtil');
 
 const app = express()
 const getNameRouter = require("./getNameEndpoint");
+const getAllResRouter = require("./getAllRes");
 
 db.connect();
 
 app.use(cors());
+
+
+app.use("/getAllRes", getAllResRouter);
 app.use("/getName", getNameRouter);
 app.get("/", (req, res) => {
     res.send({data:"get from /"});
