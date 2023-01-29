@@ -8,10 +8,14 @@ const dbName = 'MenuApp';
 
 let db;
 
- function connect() {
-     client.connect();
-    console.log("connected");
-    db = client.db(dbName);
+async function connect() {
+    try {
+        await client.connect();
+        db = client.db(dbName);
+        console.log("SUCCESSFUL DB  CONNECTION")
+    } catch {
+        console.log("ERROR CONNECTING TO DB")
+    }
 }
 
 function get(){
