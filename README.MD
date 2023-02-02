@@ -4,5 +4,4 @@ FIRST ```npm start``` inside ./api
 SECOND ```npm start``` inside ./my-app
 
 LAST VISIT:
-http://localhost:3000/?eventid=63cd9d1059027e2e5d706933
-http://localhost:3000/?eventid=63cd9d1059027e2e5d706934
+http://localhost:3000/

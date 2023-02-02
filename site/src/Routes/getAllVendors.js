@@ -1,6 +1,6 @@
-export default async function aaa(eventid) {
+export default async function getAllVendors(eventid) {
 
-    const result = await fetch("http://localhost:3002/getEvent?eventid="+eventid).then((response) => response.json());
+    const result = await fetch("http://localhost:3002/getAllVendorsFromEvent?eventid="+eventid).then((response) => response.json());
 
     return result;
 }

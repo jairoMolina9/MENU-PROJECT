@@ -10,7 +10,7 @@ export default function Homepage() {
             {data.map((eventData) =>
             <div id = "event">
                 {/* <h1>{item.Name}</h1> */}
-                <BasicCard data={eventData}></BasicCard>
+                <BasicCard path="event" data={eventData}></BasicCard>
             </div>
             )}
         </div>

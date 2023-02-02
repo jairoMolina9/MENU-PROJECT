@@ -3,9 +3,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Homepage from "./Components/Homepage";
 import Event from "./Components/Event";
 import Vendor from "./Components/Vendor";
+import ErrorComp from "./Components/Error";
 
-import aaa from "./Routes/getAllVendors"
+import getAllVendors from "./Routes/getAllVendors"
 import getAllEvents from "./Routes/getAllEvents"
+import getMenuFromVendor from "./Routes/getMenuFromVendor"
 
 // import aaa from "./Routes/getAllVendors"
 
@@ -19,11 +21,13 @@ const router = createBrowserRouter([
   {
     path: "event/:eventid",
     element: <Event />,
-    loader: ({params}) => { return aaa(params.eventid);},
+    errorElement: <ErrorComp/>,
+    loader: ({params}) => { return getAllVendors(params.eventid);},
     children: [
       {
         path: "vendor/:vendorid",
-        element: <Vendor/>
+        element: <Vendor/>,
+        loader: ({params}) => { return getMenuFromVendor(params);},
       },
     ],
   },
