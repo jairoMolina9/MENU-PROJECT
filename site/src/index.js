@@ -2,15 +2,16 @@ import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
-import { router } from './router'
-
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import PageStyle from './Components/PageStyle'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-
-  <RouterProvider router={router}/>
+  <PageStyle>
+    <RouterProvider router={router}/>
+  </PageStyle>
+  
 
 );
 

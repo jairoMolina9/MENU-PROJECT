@@ -9,8 +9,6 @@ import getAllVendors from "./Routes/getAllVendors"
 import getAllEvents from "./Routes/getAllEvents"
 import getMenuFromVendor from "./Routes/getMenuFromVendor"
 
-// import aaa from "./Routes/getAllVendors"
-
 const router = createBrowserRouter([
   {
     path: "/",
